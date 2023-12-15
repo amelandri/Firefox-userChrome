@@ -1,0 +1,61 @@
+
+/* ---Tabs/Tab Bar height--- */
+
+:root {
+ --tab-min-height: 34px !important; 
+}
+:root #tabbrowser-tabs {
+ --tab-min-height: 34px !important;
+}
+
+/*   Bookmarks bar folder icon style */
+
+.bookmark-item > .toolbarbutton-icon[type="menu"], 
+.bookmark-item[container="true"] .menu-iconic-icon {
+	fill: #666666 !important;
+	opacity: 0.5;
+}
+
+/* Bookmark bar fonts' */
+
+#personal-bookmarks {
+    font-size: 11px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-weight: 400 !important;
+}
+
+/* SELECTED TAB BORDER THICKNESS */
+
+:root .tabbrowser-tab:is([selected="true"]) { color: #444444 !important; }
+
+:root .tabbrowser-tab:is([selected="true"]) > .tab-stack > .tab-background 
+{ 
+	box-shadow: none !important; 
+	border: 1px solid var(--tab-line-color, var(--tabs-border-color, rgba(150, 150, 150, 0.3))) !important; 
+}
+
+:root .tabbrowser-tab
+{
+	letter-spacing: 0.01rem;
+	color: #676767 !important;
+}
+
+:root .tabbrowser-tab> .tab-stack > .tab-background 
+{ 
+	background: #e7e7e7;
+	
+}
+
+:root .tabbrowser-tab[pinned]> .tab-stack > .tab-background 
+{ 
+	background: none;
+}
+
+/* Bookmark bar separator */
+
+#PlacesToolbarItems > toolbarseparator {
+   appearance: none !important;
+   display: block !important;
+   margin: 6px 0px 5px 9px !important;
+   border-left: 1px solid ThreeDShadow !important;
+}
