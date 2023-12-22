@@ -1,12 +1,24 @@
 
+Try this code for the height. Make sure that --tab-min-height has the same value in both places.
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+
 /* ---Tabs/Tab Bar height--- */
 
+
+/* TABS: height */
 :root {
- --tab-min-height: 34px !important; 
+ --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
+ --tab-min-height: 30px !important;
 }
 :root #tabbrowser-tabs {
- --tab-min-height: 34px !important;
+ --tab-min-height: 30px !important;
 }
+
+#TabsToolbar {height: var(--tab-min-height) !important;}
+
+#tabs-newtab-button { display: none;}
 
 /*   Bookmarks bar folder icon style */
 
@@ -30,12 +42,13 @@
 
 :root .tabbrowser-tab:is([selected="true"]) > .tab-stack > .tab-background 
 { 
-	box-shadow: 0px 0px 3px 0px rgba(46,140,255,0.7) !important;
+	box-shadow: 0px 0px 3px 0px rgba(217,217,217,0.9) !important;
 }
 
 :root .tabbrowser-tab
 {
 	letter-spacing: 0.01rem;
+	font-size: 1.1rem !important;
 	color: #676767 !important;
 }
 
